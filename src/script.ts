@@ -50,7 +50,7 @@ function update() {
     requestAnimationFrame(update);
 }
 
-const keyCodes = [119, 97, 100, 115];
+const keyCodes = [119, 97, 100, 115, 113, 101];
 
 function onKeyPress(event: KeyboardEvent) {
 
@@ -66,6 +66,8 @@ function onKeyPress(event: KeyboardEvent) {
         case 97: coordinates.x--; break;
         case 100: coordinates.x++; break;
         case 115: coordinates.z++; break;
+        case 113: coordinates.y++; break;
+        case 101: coordinates.y--; break;
     }
 
     [box, text] = initText(coordinates);
